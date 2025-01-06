@@ -1,6 +1,6 @@
 # Imaginary-MCTS: Autonomous Computer Use Agents with Enhanced Online Planning
 
-To improve computer agent reasoning and boost task completion rates, we propose an online planning algorithm inspired by Monte Carlo Tree Search in which the agent is prompted to imagine the state changes associated with each candidate action, effectively serving as trajectory rollouts that avoid actually executing and candidate actions and then backtracking which is challenging, slow, and error-prone. The agent then scores each candidate action based on its imagined rollout and proceeds with the highest-scoring action. For more information the algorithm and its results please view our [write-up](https://github.com/user-attachments/files/18131847/Imaginary-MCTS-Write-Up.pdf). The virtualization, evaluation_examples, and baseline agent in this repository adapt or draw code from the OSWorld repository. This repository, forgoes the evaluation scripts and variety of supported virtualization and foundation model providers present in the OSWorld repo in favor of constructing a maximally light-weight computer agent that's easy to understand and experiment with.
+To improve computer agent reasoning and boost task completion rates, we propose an online planning algorithm inspired by Monte Carlo Tree Search in which the agent is prompted to imagine the state changes associated with each candidate action, effectively serving as trajectory rollouts that avoid actually executing and candidate actions and then backtracking which is challenging, slow, and error-prone. The agent then scores each candidate action based on its imagined rollout and proceeds with the highest-scoring action. For more information the algorithm and its results please view our [write-up](https://github.com/user-attachments/files/18131847/Imaginary-MCTS-Write-Up.pdf). The virtualization, evaluation_examples, and baseline agent in this repository adapt or draw code from the [OSWorld](https://github.com/xlang-ai/OSWorld) repository. This repository forgoes the evaluation scripts and variety of supported virtualization and foundation model providers present in the OSWorld repo in favor of constructing a maximally lightweight computer agent that's easy to understand and experiment with.
 
 OSWorld is a popular computer agent benchmark.
 
@@ -42,7 +42,9 @@ python3 quickstart.py
 If things are working correctly you should see:
 
 - The VMWare Fusion application open showing a desktop screen
-- A right-click get executed in the middle of the desktop screen, showing the Ubuntu pop-up menu like the below image
+- A right-click get executed in the middle of the desktop screen, showing the Ubuntu pop-up menu like the below image:
+<img width="1500" alt="Screenshot 2025-01-05 at 6 32 50 PM" src="https://github.com/user-attachments/assets/adc8ebe3-da68-483c-951c-8f8c4961ee26" />
+
 
 If you see a desktop screen prompting you for a password, enter `password` as the password and run the `quickstart.py` script again
 
@@ -71,3 +73,7 @@ python3 run.py --path_to_vm vmware_vm_data/Ubuntu0/Ubuntu0.vmx --model claude-3-
 Note: you may need to update the `path_to_vm`
 
 The results, which include screenshots, actions, and video recordings of the agent's task completion, will be saved in the `./results` directory in this case. The logs containing the agents reasoning wil be saved in the `.logs` directory
+
+---
+
+Stanford University, CS 238 Final Project. Authors: Brendan McLaughlin (BS'24, MS'25), Michael Maffezzoli (BS'23, MS'24), under the guidance of Professor Mykel J. Kochenderfer. Grade: A+
